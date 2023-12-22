@@ -14,8 +14,8 @@ const Navbar = () => {
         <Image src="/hilink-logo.svg" alt="logo" width={74} height={29} />
       </Link>
       <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link href={link.href}>
+        {NAV_LINKS.map((link, index) => (
+          <Link key={index} href={link.href}>
             <li
               className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
               key={link.key}
